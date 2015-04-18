@@ -4,13 +4,13 @@
 
 	class Plugin extends BasePlugin {
 
-		static $db_version = '0' ;
-		static $custom_posts = array();
+		static $db_version = '0.1' ;
+		static $custom_posts = array('Page', 'Downloadable');
 		static $custom_taxonomies = array();
 		static $custom_post_formats = array();
 		static $custom_classes = array();
-		static $custom_users = array();
-		static $presenters = array();
+		static $custom_users = array('Editor');
+		static $presenters = array('Auth');
 		static $has_translations = false ;
 
 		static $absent_roles = array();
