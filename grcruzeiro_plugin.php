@@ -1,9 +1,9 @@
 <?php
 	/*
-	Plugin Name: Atlas Base
+	Plugin Name: GRCruzeiro
 	Version: 0.1
-	Plugin URI: http://memuller.com/wp_atlas
-	Description: Base plugin model for WP_Atlas.
+	Plugin URI: http://grcruzeiro.com.br
+	Description: Base plugin used at GRCruzeiro main site.
 	Author: Matheus Muller
 	Author URI: http://memuller.com
 	*/
@@ -41,6 +41,6 @@
 	if(!class_exists('Translation')) require_once 'lib/Translation.php' ;
 	
 	require 'base/Base.php' ;
-	Atlas\Plugin::build();
+	GRCRZ\Plugin::build();
 
 ?>

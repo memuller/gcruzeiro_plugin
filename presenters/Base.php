@@ -1,5 +1,5 @@
 <?php
-	namespace Atlas\Presenters ;
+	namespace GRCRZ\Presenters ;
 	use Presenter ;
 
 	class Base extends Presenter {

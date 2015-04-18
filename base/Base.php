@@ -1,5 +1,5 @@
 <?php
-	namespace Atlas ;
+	namespace GRCRZ ;
 	use BasePlugin ;
 
 	class Plugin extends BasePlugin {
