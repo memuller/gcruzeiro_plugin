@@ -3,36 +3,17 @@
 	use CustomPost ;
 
 	class Downloadable extends CustomPost {
-		static $name = "downloadable" ;
-		static $creation_fields = array( 
-			'label' => 'downloadable','description' => 'Um arquivo para download.',
-			'public' => false,'show_ui' => true,'capability_type' => 'post', 'map_meta_cap' => true, 
-			'hierarchical' => false,
-			'supports' => array('custom-fields', 'title'), 
-			'has_archive' => false, 'taxonomies' => array(),
-			'labels' => array (
-				'name' => 'Arquivos',
-				'singular_name' => 'Arquivo',
-				'menu_name' => 'Arquivos',
-				'add_new' => 'Cadastrar Arquivo',
-				'add_new_item' => 'Cadastrar Arquivo',
-				'edit' => 'Atualizar',
-				'edit_item' => 'Atualizar Arquivo',
-				'new_item' => 'Registrar',
-				'view' => 'Ver',
-				'view_item' => 'Ver')
-		) ;
-		static $icon = '\f316' ;
+		static $name = "dlm_download" ;
+		static $skip_creation = true; 
 
 		static $fields = array(
-			'file_field' => array('type' => 'media', 'preview' => false, 'label' => 'Arquivo'),
+			'private' => array('type' => 'boolean', 'default' => false, 'label' => 'Requer login', 'description' => 'se sim, requer usuário com permissões de uso da central'),
 		) ;
 
 		static $editable_by = array(
-			'form_advanced' => array( 'fields' => array( 'file_field')),
+			'access' => array('name' => 'Privacidade', 'placing' => 'side', 
+				'fields' => array( 'private')),
 		);
-
-		
 
 		static function build(){
 			parent::build(); $class = get_called_class();
